@@ -73,8 +73,11 @@ public class TileMap : MonoBehaviour {
 
         // Assign mesh to filter/render/collider
         MeshFilter mesh_filter = GetComponent<MeshFilter>();
+        MeshCollider mesh_collider = GetComponent<MeshCollider>();
+
 
         mesh_filter.mesh = mesh;
+        mesh_collider.sharedMesh = mesh;
         Debug.Log("mesh done");
 
 
